@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="#" class="logo">VIJAY</a>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav>
+            <a href="#home" class="active">Home</a>
+            <a href="#services">Services</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="home">
+        <div class="home-img">
+            <img src="main.jpg" alt="Profile Image">
+        </div>
+        <div class="home-content">
+            <h1>Hi, It's <span>VIJAY MARTIN</span></h1>
+            <h3 class="typing-text">I'm a <span id="typing"></span></h3>
+            <p>Passionate Software Developer skilled in Flutter, UI/UX, and app development. Experienced in cross-platform mobile apps, team collaboration, and building innovative tech solutions.</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/vijay-martin-86b430232"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Vijayleo46"><i class="fa-brands fa-github"></i></a>
+                <a href="https://leetcode.com/u/vijaymartin72/"><i class="fa-solid fa-code"></i></a>
+                <a href="https://instagram.com/__v____m_____46__/"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <a href="#contact" class="btn">Hire me</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Services</h2>
+        <div class="card-grid">
+            <div class="service-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Mobile App Development</h3>
+                <p>Cross-platform apps using Flutter for Android & iOS.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-paint-brush"></i>
+                <h3>UI/UX Design</h3>
+                <p>Creative interface design using Figma and Canva.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Web Development</h3>
+                <p>Responsive websites with HTML, CSS, and JavaScript.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-brain"></i>
+                <h3>AI Projects</h3>
+                <p>Innovative AI-powered solutions integrated into real applications.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <div class="skills-box">
+            <p><strong>Languages:</strong> Dart, JavaScript, Java, Python, C++, C</p>
+            <p><strong>Frameworks:</strong> Flutter, Riverpod, BLoC</p>
+            <p><strong>Web:</strong> HTML, CSS</p>
+            <p><strong>Tools:</strong> Figma, Canva, Git, SQLite</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-gallery">
+            <div class="project-card">
+                <h3>📱 WhatsApp App Clone</h3>
+                <p>Built with Flutter UI and Firebase functionalities.</p>
+            </div>
+            <div class="project-card">
+                <h3>📅 Date Reminder App</h3>
+                <p>Smart alerts for important dates and events.</p>
+            </div>
+            <div class="project-card">
+                <h3>👻 Snapchat App Clone</h3>
+                <p>Interactive design with real-time camera features.</p>
+            </div>
+            <div class="project-card">
+                <h3>💰 Personal Expense Tracker</h3>
+                <p>Includes analytics, filters, SQLite local storage.</p>
+            </div>
+            <div class="project-card">
+                <h3>🧠 DreamRoom AI</h3>
+                <p>AI-based 3D room layout generator with Flutter + LoRA.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="experience-item">
+            <h3>Flutter Developer Intern</h3>
+            <span>Spectrum Softtech Solutions, Kochi (Aug 2024 – Sep 2024)</span>
+            <p>Worked on real-world Flutter applications, UI design, and state management.</p>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <h2>Education</h2>
+        <div class="education-entry">
+            <h3>B.E. Computer Science and Engineering</h3>
+            <p>Anna University</p>
+            <p>Final Year Project: AI-Driven 3D Room Visualization and Design Enhancement</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-info">
+            <p><i class="fas fa-envelope"></i> vijaymartin72@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +91-7736472576</p>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+        const roles = ["Flutter Developer", "Web Developer", "App Developer", "UI/UX Designer", "Tech Enthusiast"];
+        let currentIndex = 0;
+        const typingElement = document.getElementById('typing');
+
+        function typeRole() {
+            typingElement.textContent = roles[currentIndex];
+            currentIndex = (currentIndex + 1) % roles.length;
+            setTimeout(typeRole, 2000);
+        }
+
+        document.addEventListener("DOMContentLoaded", typeRole);
+    </script>
+
+</body>
+
+</html>
